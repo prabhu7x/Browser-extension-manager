@@ -1,0 +1,45 @@
+@use './colors';
+
+body {
+    background: colors.$Dark-Gradient;
+}
+.container.dark {
+    background: colors.$Dark-Gradient;
+    .logo {
+        background-color: colors.$Neutral-900;
+        img {
+            filter: brightness(0) invert(1);
+        }
+        .theme button {
+            background-color: colors.$Neutral-700;
+        }
+    }
+
+    .filter {
+        h1 {
+            color: colors.$Neutral-0;
+        }
+        .filter-btn-cont button {
+            background-color: colors.$Neutral-700;
+            color: colors.$Neutral-0;
+            box-shadow: colors.$Dark-Gradient;
+            border: colors.$br-color;
+            &.active {
+                color: colors.$Neutral-900;
+            }
+        }
+    }
+
+    .ext-list .card {
+        background-color: colors.$Neutral-900;
+        color: colors.$Neutral-300;
+        .status button {
+            color: colors.$Neutral-0;
+            background-color: colors.$Neutral-800;
+            border: colors.$br-color;
+            &:hover {
+                color: colors.$Neutral-800;
+            }
+        }
+    }
+}

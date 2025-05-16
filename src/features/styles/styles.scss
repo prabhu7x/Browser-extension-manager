@@ -1,0 +1,119 @@
+@use './dark-theme';
+@use './switch.scss';
+@use './colors.scss';
+
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('/assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf');
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    // background: colors.$Neutral-200; 
+}
+button {
+    cursor: pointer;
+}
+.container {
+    background-color: colors.$Neutral-200; 
+    padding: 2rem;
+    .logo {
+        display: flex;
+        padding: .5rem;
+        justify-content: space-between;
+        align-items: center;
+        background-color: colors.$Neutral-0;
+        border-radius: 10px;
+        box-shadow: colors.$Light-Gradient;
+        text-align: center;
+        .theme {
+            cursor: pointer;
+            button {
+                all: unset;
+                background-color: colors.$Neutral-300;
+                padding: .5rem;
+                border-radius: 10px;
+                width: 30px;
+                height: 30px;
+                &:hover {
+                    background-color: colors.$Neutral-600;
+                }
+            }
+        }
+    }
+
+    .filter {
+        h1 {
+            text-align: center;
+        }
+        .filter-btn-cont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            button {
+                outline: none;
+                padding: 1rem;
+                border-radius: 30px;
+                min-width: 4rem;
+                border: none;
+                font-size: 1rem;
+                color: colors.$Neutral-900;
+                background-color: colors.$Neutral-0;
+                box-shadow: 9px 9px 20px 0px rgb(0 0 0 / 10%);
+                &:hover {
+                    background-color: colors.$Neutral-600;
+                }
+                &.active {
+                    color: colors.$Neutral-0;
+                    background-color: colors.$Red-700;
+                }
+            }
+        }
+    }
+
+    .ext-list {
+        .card  {
+            background-color: colors.$Neutral-0;
+            border-radius: 15px;
+            padding: 1rem;
+            margin-top: 1rem;
+            box-shadow: 9px 9px 20px 0px rgb(0 0 0 / 10%);
+            .img-with-info {
+                display: flex;
+                align-items: flex-start;
+                gap: 1rem;
+                h2 {
+                    margin-top: 0;
+                }
+            }
+            .status {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                button {
+                    padding: .8rem 1.2rem;
+                    border-radius: 30px;
+                    font-size: 1rem;
+                    box-shadow: colors.$Light-Gradient;
+                    border: colors.$br-color;
+                    color: colors.$Neutral-900;
+                    background-color: colors.$Neutral-0;
+                    transition: all .2s ease-in-out;
+                    &:hover {
+                        color: colors.$Neutral-0;
+                        background-color: colors.$Red-700;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@import './desktop';
