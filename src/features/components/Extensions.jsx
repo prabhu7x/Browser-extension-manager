@@ -9,6 +9,13 @@ function Extensions() {
     const toggleTheme = ()=>{
       setLight(!light)
     }
+    useEffect(()=>{
+      if(light){
+        document.body.style.backgroundColor = 'hsl(217,61%,90%)' }
+        else{
+        document.body.style.backgroundColor = 'hsl(227,75%,14%)'
+        }
+    },[light])
 
     const [Filter, setFilter] = useState('all')
 

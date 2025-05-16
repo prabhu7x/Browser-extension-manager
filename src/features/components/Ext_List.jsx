@@ -14,7 +14,6 @@ function Ext_List({Filter}) {
 
     useEffect(()=>{
       dispatch({type: 'GET-DATA', payload: Filter})
-      console.log(`currentFilter: ${state.currentFilter} - filter: ${Filter}`)
     },[Filter, state.currentFilter])
     
     const toggleActive = (name)=>{

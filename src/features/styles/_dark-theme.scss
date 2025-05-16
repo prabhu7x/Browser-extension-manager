@@ -1,8 +1,5 @@
 @use './colors';
 
-body {
-    background: colors.$Dark-Gradient;
-}
 .container.dark {
     background: colors.$Dark-Gradient;
     .logo {
